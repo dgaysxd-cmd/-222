@@ -1,0 +1,61 @@
+/* ===== 1. СБРОС И ФОН СТРАНИЦЫ ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Белый фон, как на скриншоте */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ===== 2. КОНТЕЙНЕР ===== */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Расстояние между кнопками */
+}
+
+/* ===== 3. БАЗОВАЯ КНОПКА ===== */
+.filters-btn {
+    padding: 12px 24px; /* Чуть больше отступы, чтобы кнопка была крупнее */
+    font-size: 16px;
+    font-weight: 400; 
+    font-family: inherit;
+    color: #111111; /* Черный текст */
+    background-color: #ffffff; /* Белый фон */
+    border: 1px solid #e0e0e0; /* Светло-серая обводка */
+    border-radius: 12px; /* Углы скруглены, но это не «таблетка» */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+/* Наведение на неактивную кнопку */
+.filters-btn:hover {
+    border-color: #b0b0b0; /* Обводка становится чуть темнее */
+}
+
+/* ===== 4. АКТИВНАЯ КНОПКА ===== */
+.filters-btn--active {
+    color: #ffffff; /* Белый текст */
+    background-color: #5c33f6; /* Яркий фиолетовый цвет (взят пипеткой со скрина) */
+    border-color: #5c33f6;
+}
+
+/* Наведение на активную кнопку */
+.filters-btn--active:hover {
+    background-color: #4b26d9; /* Чуть темнее при наведении */
+    border-color: #4b26d9;
+    color: #ffffff;
+}
+
+/* ===== 5. ФОКУС ДЛЯ КЛАВИАТУРЫ ===== */
+.filters-btn:focus-visible {
+    outline: 2px solid #5c33f6;
+    outline-offset: 2px;
+}
